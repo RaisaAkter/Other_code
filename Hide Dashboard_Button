@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+	<name>Hide Button</name>
+	<code>Hide Button</code>
+	<version>1</version>
+	<author>Raisa</author>
+	<link></link>
+	 
+	<file path="admin/view/template/common/developer.twig">
+		
+		<operation info="hide the cache button">
+			<search index="0"><![CDATA[<div class="modal-dialog">]]></search>
+			<add position="before"><![CDATA[
+			<div class="modal-developer" style="display:none">
+			<div class="modal-dialog" style="display:none">
+        ]]></add>
+		</operation>
+	  <operation>
+			<search index="0"><![CDATA[<div class="modal-header">]]></search>
+			<add position="after" offset="3"><![CDATA[
+			
+        ]]></add>
+		</operation>
+		<operation>
+			<search index="0"><![CDATA[</table>]]></search>
+			<add position="after" offset="3"><![CDATA[
+			<!
+        ]]></add>
+		</operation>
+	</file>
+	<file path="admin/view/template/common/dashboard.twig">
+		<operation>
+			<search index="0"><![CDATA[<div class="pull-right">]]></search>
+			<add position="before"><![CDATA[
+			<div class="pull-right" style="display:none">
+        ]]></add>
+		</operation>
+	</file>
+	
+</modification>
